@@ -8,6 +8,7 @@ public class Main {
         proc.pedirObjetivo();
         proc.mostrarDatos();
         proc.comprobacionObjetivo();
+        proc.seleccionHecho();
         proc.razonamientoAdelante();
     }
 }

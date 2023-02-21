@@ -17,6 +17,7 @@ import java.util.Scanner;
         int noHechos;
         public ArrayList<String> reglas = new ArrayList<String>();
         public ArrayList<String> hechosCon = new ArrayList<String>();
+        public ArrayList<String> reglasAparece = new ArrayList<String>();
         public void pedirDatos(){
             System.out.println("¿Cuántas reglas son?");
             noReglas=scan.nextInt();
@@ -71,13 +72,13 @@ import java.util.Scanner;
 
         public void razonamientoAdelante(){
             for(i=0;i<reglas.size();i++){
-                aux=reglas.get(i);
-                hechos=hechosCon.get(i);
-                if(aux.regionMatches(true,13,hechos,0,2)){
-                    System.out.println("Si se encuentra");
-                    break;
+                for (a=0;a<hechosCon.size();a++) {
+                    aux=reglas.get(i);
+                    hechos=hechosCon.get(a);
+                    if (aux.regionMatches(true, 13, hechos, 0, 2)) {
+                        System.out.println("Si se encuentra");
+                    }
                 }
-
             }
         }
     }
