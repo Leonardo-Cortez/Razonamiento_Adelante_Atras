@@ -5,6 +5,9 @@ public class Main {
 
         proc.pedirDatos();
         proc.hechosConocidos();
+        proc.pedirObjetivo();
         proc.mostrarDatos();
+        proc.comprobacionObjetivo();
+        proc.razonamientoAdelante();
     }
 }

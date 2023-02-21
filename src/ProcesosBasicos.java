@@ -7,6 +7,10 @@ import java.util.Scanner;
         Scanner scan = new Scanner(System.in);
         String texto;
         String texto2;
+        String objetivo;
+        String aux;
+        String regla;
+        String hechos;
         int i;
         int a;
         int noReglas;
@@ -35,6 +39,7 @@ import java.util.Scanner;
                 System.out.println(hechosCon.get(a));
             }
             System.out.println("}");
+            System.out.println("\n");
         }
 
         public void hechosConocidos(){
@@ -49,5 +54,32 @@ import java.util.Scanner;
                 scan.nextLine();
             }
         }
+
+        public void pedirObjetivo(){
+            System.out.println("Dame el objetivo");
+            objetivo=scan.nextLine();
+            scan.nextLine();
+            System.out.println("\n");
+
+        }
+
+        public void comprobacionObjetivo(){
+            if(hechosCon.contains(objetivo)){
+                System.out.println("El objetivo ya se encuentra en la base de conocimiento");
+            }
+        }
+
+        public void razonamientoAdelante(){
+            for(i=0;i<reglas.size();i++){
+                aux=reglas.get(i);
+                hechos=hechosCon.get(i);
+                if(aux.regionMatches(true,13,hechos,0,2)){
+                    System.out.println("Si se encuentra");
+                    break;
+                }
+
+            }
+        }
     }
+
 
